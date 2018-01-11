@@ -1,0 +1,9 @@
+<h1><%= @figure.name %></h1>
+<p> <a href="/figures/<%= @figure.id %>/edit">Edit</a>  </p>
+
+
+<!-- DELETE -->
+<form action="/figures/<%= @figure.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>

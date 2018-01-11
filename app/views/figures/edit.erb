@@ -1,0 +1,6 @@
+<p>Update Figure</p>
+<form action="/figures/<%= @figure.id %>" method="POST">
+  <input id = "hidden" type = "hidden" name = "_method" value = "patch">
+  <input type="text" name="figure[name]" id="name" value= "<%= @figure.name %>"/>
+  <input type="submit" value="Edit">
+</form>
