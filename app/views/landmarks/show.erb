@@ -1,10 +1,10 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<h1><%= @landmark.name %></h1>
+<p>Year completed: <%= @landmark.year_completed %></p>
+<p> <a href="/landmarks/<%= @landmark.id %>/edit">Edit</a>  </p>
+
+
+<!-- DELETE -->
+<form action="/landmarks/<%= @landmark.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>
