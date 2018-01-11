@@ -9,12 +9,25 @@ class FiguresController < ApplicationController
 
   # NEW action
   get '/figures/new' do
+    @landmarks = Landmark.all
+    @titles = Title.all
     erb :"figures/new"
   end
 
   # CREATE action
   post '/figures' do
+
     @figure = Figure.create(name: params[:name])
+    params[:landmark][:name].each do |landmark_id|
+      @figure.landmarks << Landmark.find(landmark_id)
+    end
+
+    params[:title][:name].each do |title_id|
+      @figure.titles << Title.find(title_id)
+    end
+
+
+
     redirect "/figures/#{@figure.id}"
   end
 

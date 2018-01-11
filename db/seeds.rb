@@ -84,3 +84,32 @@ fig1.titles << title1
 fig2.titles << title2
 fig3.titles << title3
 fig4.titles << title1
+
+l1 = Landmark.all[0]
+l2 = Landmark.all[1]
+l3 = Landmark.all[2]
+l4 = Landmark.all[3]
+l5 = Landmark.all[4]
+l6 = Landmark.all[5]
+l7 = Landmark.all[6]
+l8 = Landmark.all[7]
+l9 = Landmark.all[8]
+
+l1.figure = fig1
+l1.save
+l2.figure = fig2
+l2.save
+l3.figure = fig3
+l3.save
+l4.figure = fig4
+l4.save
+l5.figure = fig1
+l5.save
+l6.figure = fig2
+l6.save
+l7.figure = fig3
+l7.save
+l8.figure = fig4
+l8.save
+l9.figure = fig1
+l9.save
