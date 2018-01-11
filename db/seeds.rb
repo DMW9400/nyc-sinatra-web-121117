@@ -44,7 +44,7 @@ figure_list = {
     },
     "Ada Lovelace" => {
     },
-    "Linus Torvalds" => { 
+    "Linus Torvalds" => {
     }
   }
 
@@ -69,3 +69,18 @@ title_list.each do |name, figure_hash|
   p.name = name
   p.save
 end
+
+# associations
+fig1 = Figure.all[0]
+fig2 = Figure.all[1]
+fig3 = Figure.all[2]
+fig4 = Figure.all[3]
+
+title1 = Title.all[0]
+title2 = Title.all[1]
+title3 = Title.all[2]
+
+fig1.titles << title1
+fig2.titles << title2
+fig3.titles << title3
+fig4.titles << title1
